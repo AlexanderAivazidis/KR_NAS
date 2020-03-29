@@ -39,7 +39,7 @@ numberOfGroups = np.array((4,6,8,10))
 lengthScales = np.array((0.1, 0.2, 0.4))
 topGenesArray = np.array((10,100,1000))
 
-rSlides = '00MU'
+rSlides = ('00MU', '00MV')
 normMethod = 'Q3'
 
 # Make a humongous set of for loops that generates figures according to many different parameters, so that we can choose the one we like the most:
@@ -99,17 +99,24 @@ for rSlides in relevantSlides:
             
         favouriteGenes = np.array(('VIM', 'HOPX','EOMES', 'NES', 'PAX6', 'SLC1A3', 'GFAP', 'PTPRZ1', 'HES1', 'HES5', 'CDH2', 'SPARCL1', 'TNC', 'PDGFRA', 'NTRK2', 'NEUROD6', 'SOX2', 'DCX', 'MAP2', 'SYP', 'SOX10', 'GAP43', 'MEF2C', 'NPY', 'GJA3', 'APOL3', 'RELN', 'NCAM2', 'STMN2', 'MAP1B', 'TUBB2B', 'TUBA1C,TUBA1A,TUBA1B', 'SATB2', 'DACT1', 'SYT4', 'TUBB3', 'AIF1', 'SOX5', 'BCL11B', 'SATB2'))
         
-        colours = np.repeat('blue', sum(subset))
-        colours[metadata['slide'][subset] == '00MU'] = 'red'
-        figsize(30, 10)
+        favouriteGenes = np.array(('HES1', 'TNC', 'TUBB3', 'NTRK2'))
+        
+        favouriteGenes = np.array(('LMO3', 'CRYM', 'FBXW7', 'TLE4', 'LMO7', 'PPP1R1B',   'MEG3',    'KCTD12',    'PDE1A',     'ZNF385D',   'NRCAM',   'GRIN2B',    'SYT6',      'SORCS1',    'ST18',      'CELF4',   'SEMA3E',    'ANK3',    'WASF1',   'SCN2A',  'ATP1B1',  'TRPM3',     'VSNL1',     'SCD5' ,  
+'TMEM178A',  'NUAK1',     'LPL',       'ADCY1',     'GPR22',     'NR4A2',     'KHDRBS3',   'CHL1' ,   'PLEKHH2' ,  'EPB41L4A',  'SOBP' ,   'MEF2C',     'GRIA2' ,  'ITSN1',   'KCNMA1',    'TP53I11',   'PCP4',      'SMARCA2', 'AKAP7' ,    'MGLL' ,   'GAS7',      'NEGR1' ,    'PPM1L',   'PEX5L'))
+        
+        favouriteGenes = favouriteGenes[[favouriteGenes[i] in resid_expr_subset.columns for i in range(len(favouriteGenes))]]
+        
+        colours = np.repeat('red', sum(subset))
+        #colours[metadata['slide'][subset] == '00MU'] = 'red'
+        figsize(5, 50)
         for i in range(len(favouriteGenes)):
-            plt.subplot(4,10, i + 1)
+            plt.subplot(23,2, i + 1)
             plt.scatter(sample_info['x'][subset], np.array(resid_expr_subset[favouriteGenes[i]]), c=colours);
             plt.title(favouriteGenes[i])
             plt.xlabel('CorticalDepth')
             plt.ylabel('Resi. Expr.')
             plt.tight_layout()
-            plt.savefig('favouriteGenes/KennysFavouriteGenes' + 'normMethd' + normMethod +  'Slides' + ''.join(rSlides) + '.png') 
+            plt.savefig('favouriteGenes/KennysFavouriteGenes' + 'normMethd' + normMethod +  'Slides' + ''.join(rSlides) + '.pdf') 
         plt.show()
         ## Let's group the genes into typical spatial patterns:
 

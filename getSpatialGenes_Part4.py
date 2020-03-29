@@ -1,5 +1,4 @@
 # Make plots of genes with most spatial structure in different ROIs and compare to the other ROIs at the same cortical depth:
-
 import pickle
 import os
 import pandas as pd
@@ -29,7 +28,7 @@ properties = pd.read_table('/home/jovyan/KR_NAS/Sanger_288ROIs_SegmentProperties
 properties = properties.rename(index=properties['DSP_Sample_ID'])
 properties = properties.reindex(np.array(metadata['Sample_ID']))
 columnNames = ('x', 'y', 'total_counts', 'Q3_counts')
-sample_info = pd.DataFrame(index=metadata['Sample_ID'], columns=columnNames)
+sample_info = pd.DataFrame(index=metadata['Sample_ID'], columns=columnNames)s
 sample_info['x'] = np.array(metadata['VCDepth'])
 sample_info['y'] = np.array(metadata['Radial_position'])
 sample_info['total_counts'] = [sum(counts.iloc[:,i]) for i in range(len(counts.iloc[1,:]))] 
@@ -37,13 +36,14 @@ sample_info['Q3_counts'] = [sum(np.sort(counts.iloc[:,i])[int(np.round(0.5*len(c
 
 rSlides = np.array(('00MU', '00MV', '00MV-2'))
 AOI_type_Array = np.array(('EOMESpos', 'HOPXpos', 'Ring', 'Residual'))
-threshold = 0.5
+threshold = 0.66
 
 numberOfTopsGenes = []
 topGenes = pd.DataFrame(index=range(100), columns=AOI_type_Array)
 
 for AOI_type in AOI_type_Array:
-
+    
+    print(AOI_type)
     # Load relevant results:        
         
     results = pickle.load(open("resultLists/resultListnormMethdQ3Slides" + "".join(rSlides) + "AOI_type" + AOI_type + ".pickle", "rb" ))    
@@ -58,7 +58,9 @@ for AOI_type in AOI_type_Array:
     counts_subset = counts.loc[:,relevantSangerIDs]
     properties_subset = properties.loc[relevantIDs,:]    
     geneCounts = [sum([counts_subset.iloc[i,j] > properties_subset.iloc[j,19] for j in range(noSamples)])/noSamples for i in range(np.shape(counts_subset)[0])]
-
+    
+    goodGenes = counts_subset.index[np.array(geneCounts) > threshold]
+    
     # Recalculate FDR based on those genes only:
 
     results_subset = results[[results['g'].iloc[i] in goodGenes for i in range(len(results['g']))]]
@@ -69,20 +71,23 @@ for AOI_type in AOI_type_Array:
     norm_expr = NaiveDE.stabilize(counts.T).T
 
     counts_Q3 = np.array(NaiveDE.regress_out(sample_info, norm_expr, 'np.log(Q3_counts)').T).T
-    
-    AOI_type = 'EOMESpos'
+
     genes = topGenes[AOI_type]
-    genes = genes.iloc[0:10]
-    
-    figure(num=None, figsize=(20, len(genes)*5), dpi=80, facecolor='w', edgecolor='k')
+    genes = genes.iloc[0:30]
+
+    print(AOI_type)
+    figure(num=None, figsize=(5, len(genes)*5), dpi=80, facecolor='w', edgecolor='k')
     for i in range(len(genes)):
         plt.subplot(len(genes),1, i + 1)
-        sub_subset = np.array(metadata.loc[:, 'AOI_type'] == 'EOMESpos')
-        plt.scatter(sample_info['x'][sub_subset], counts_Q3[np.where(np.array(counts.index) == genes.iloc[i]),sub_subset], label = genes.iloc[i])
+        sub_subset = [metadata['slide'][i] in rSlides and metadata['AOI_type'][i] == AOI_type for i in range(len(metadata['slide']))]
+        plt.scatter(sample_info['x'][sub_subset], counts_Q3[np.where(np.array(counts.index) == genes.iloc[i]),sub_subset], label = genes.iloc[i] + '  EOMESpos', c = 'blue')
+        sub_subset = [metadata['slide'][i] in rSlides and metadata['AOI_type'][i] == 'Ring' for i in range(len(metadata['slide']))]
+        plt.scatter(sample_info['x'][sub_subset], counts_Q3[np.where(np.array(counts.index) == genes.iloc[i]),sub_subset], label = genes.iloc[i] + '  Ring', c = 'red')
         plt.title(genes.iloc[i])
         plt.xlabel('CorticalDepth')
         plt.ylabel('Normalized Count')
         plt.legend()
+        plt.savefig('otherPlots/' + AOI_type + '_SpatialStructure.pdf')
 
 
 

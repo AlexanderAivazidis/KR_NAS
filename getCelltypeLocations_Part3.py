@@ -27,7 +27,7 @@ import pyreadr
 
 os.chdir('/home/jovyan/KR_NAS/')
 
-rSlides = np.array(('00MU', '00MV')) # slide we want to look at
+rSlides = np.array(('00MU', '00MV', '00MV-2')) # slide we want to look at
 AOI_type = np.array(('EOMESpos', 'HOPXpos', 'Residual', 'Ring'))
 Radial_positions = np.array((1,2,3))
 
@@ -62,7 +62,7 @@ polioudakis = polioudakis.rename(index=genes)
 
 # Choose the top N markers only:
 
-N = 63
+N = 50
 columnNames = np.unique(markers['cluster'])
 topN_markers = pd.DataFrame(index=range(N), columns=columnNames)
 for i in range(len(columnNames)):
@@ -84,7 +84,7 @@ polioudakis_subset = polioudakis.reindex(np.array(counts_subset.index))
 
 mod1 = c2l.LocationModel(
         np.array(polioudakis_subset), np.array(counts_subset).T,
-        data_type='float32', n_iter=200000,
+        data_type='float32', n_iter=100000,
         learning_rate=0.0001,
         total_grad_norm_constraint=200,
         verbose=False)
@@ -102,6 +102,10 @@ mod1.compute_expected()
 mod1.plot_posterior_mu_vs_data()
 
 results = mod1.spot_factors_df
+
+pickle.dump(results, open("celltypeLocationsPart3.pickle", "wb" ) )
+
+picke.dump(results,)
 
 cellColours = np.array(('green', 'blue', 'purple', 'yellow', 'red'))
 celltypes = np.array(('vRG', 'oRG', 'IP', 'ExDp1', 'ExM-U'))
@@ -124,9 +128,10 @@ for i in range(len(celltypes)):
 
 ### Make a nice plot that shows mRNA content coming from vRG and IP in both EOMES+, HOPX+, rings and background
 
-cellColours = np.array(('green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red'))
+cellColours = np.array(('green', 'blue', 'purple', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red'))
 celltypes = np.array(('vRG', 'oRG', 'IP', 'ExDp1', 'ExM-U'))
 celltypes = np.array(polioudakis.columns)
+celltypes = celltypes[np.array((8,13,14,11))]
 
 results_normed = np.array(results)
 results_normed = (results_normed.T/[sum(results_normed[i,]) for i in range(len(results_normed[:,1]))]).T

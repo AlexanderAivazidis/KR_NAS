@@ -33,6 +33,7 @@ AOI_type = ['Geometric'] #np.array(('HOPXpos', 'EOMESpos', 'Residual', 'Ring', '
 Radial_positions = np.array((2))
 
 # Let's load the data and metadata from our Nanostring experiment:
+
 counts = pd.read_table('Sanger_288ROIs_TargetCountMatrix.txt')
 genes = counts['TargetName']
 counts = counts.drop('TargetName',1)
@@ -40,7 +41,7 @@ counts = counts.rename(index=genes)
 counts = counts.astype('int')
 counts = counts[np.array([sum(counts.iloc[i,:]) for i in range(len(counts.iloc[:,0]))]) > 3 * 288]
 metadata = pd.read_csv('NanoString sequencing all annotations 2020.02.10.csv')
-metadata = metadata.iloc[0:289,]
+metadata = metadata.iloc[0:286,]
 metadata = metadata.rename(index=metadata['Sanger_sampleID'])
 metadata = metadata.reindex(np.array(counts.columns))
 properties = pd.read_table('Sanger_288ROIs_SegmentProperties.txt')
@@ -111,19 +112,24 @@ results = mod1.spot_factors_df
 results_normed = np.array(results)
 results_normed = (results_normed.T/[sum(results_normed[i,]) for i in range(len(results_normed[:,1]))]).T
 
-# Plot the results as a stacked bar plot:
-cellColours = np.array(('green', 'blue', 'purple', 'yellow', 'red'))
-celltypes = np.array(('vRG', 'oRG', 'IP', 'ExDp1', 'ExM-U'))
-results_normed = np.array(results)
-results_normed = (results_normed - results_normed.min(0)) / results_normed.ptp(0)
-figsize(5, 25)
-for i in range(len(celltypes)):
-    plt.subplot(5,1, i + 1)
-    plt.scatter(sample_info['x'][subset_rois], results_normed[:,results.columns == celltypes[i]], label = celltypes[i], c = cellColours[i])
-    plt.title('mRNA Signal for each celltype')
-    plt.xlabel('CorticalDepth')
-    plt.ylabel('Normalized mRNA')
-    plt.legend()
-    plt.savefig('CellLocations.pdf')
+for order in range(8):
+    print(order)
+    # Plot the results as a stacked bar plot:
+    cellColours = np.array(('green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red'))
+    celltypes = results.columns
+    # results_normed = np.array(results)
+    # results_normed = (results_normed - results_normed.min(0)) / results_normed.ptp(0)
+    figsize(20,20)
+    for i in range(len(celltypes)):
+        plt.subplot(4,4, i + 1)
+        x = sample_info['x'][subset_rois]
+        y = results_normed[:,celltypes == celltypes[i]][:,0]
+        plt.plot(np.unique(x), np.poly1d(np.polyfit(x, y, order))(np.unique(x)), label = celltypes[i], c = cellColours[i])
+        plt.scatter(x, y, label = celltypes[i], c = cellColours[i])
+        plt.xlabel('CorticalDepth')
+        plt.ylabel('mRNA Proportion')
+        plt.legend()
+    plt.savefig('CellLocations19pcw_PolynomialOrder' + str(order) + '.pdf')
+    plt.show()
 
 
