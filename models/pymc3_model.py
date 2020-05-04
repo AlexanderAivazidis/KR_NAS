@@ -55,7 +55,6 @@ class Pymc3Model(BaseModel):
         # Pass data to theano
         self.x_data = theano.shared(X_data.astype(self.data_type))
         
-        
     def sample_prior(self):
         r""" Take one sample from the prior 
         (fails for >1 due to tensor dimensions problem - likely pymc3 bug) 
