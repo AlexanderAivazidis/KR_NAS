@@ -31,6 +31,10 @@ sample_info['y'] = np.array(metadata['Radial_position'])
 sample_info['total_counts'] = [sum(counts.iloc[:,i]) for i in range(len(counts.iloc[1,:]))] 
 sample_info['Q3_counts'] = [sum(np.sort(counts.iloc[:,i])[int(np.round(0.5*len(counts.iloc[:,i]))):int(np.round(0.75*len(counts.iloc[:,i])))]) for i in range(len(counts.iloc[1,:]))] 
 
+# Only keep genes expressed above LOD:
+
+
+
 relevantSlides = np.array((('00MU', '00MV', '00MV-2'), '00MU', ('00MV', '00MV-2')))
 normalizationMethods = ['Q3']
 qValueS = np.array((0.05))
@@ -77,7 +81,7 @@ for AOI_type in AOI_type_Array:
                 genes_significant = sum(multi.multipletests(results['pval'], method = 'fdr_bh')[1] < 0.05)
 
             results['FDR'] = multi.multipletests(results['pval'], method = 'fdr_bh')[1]
-
+            
             # Save results:
 
             pickle.dump(results, open('resultLists/' + 'resultList' + 'normMethd' + normMethod + 'Slides' + ''.join(rSlides) + 'AOI_type' + AOI_type + ".pickle", "wb" ) )

@@ -1,0 +1,321 @@
+Table S6. Results from MAGMA gene based tests,,,
+,,,
+Gene name,P,Trait,Phenotype
+TFDP2,4.05E-08,SA,Total Surface Area
+NPM1,1.68E-09,SA,Total Surface Area
+FGF18,3.70E-09,SA,Total Surface Area
+FOXO3,3.43E-10,SA,Total Surface Area
+HINT3,1.79E-09,SA,Total Surface Area
+TRMT11,1.15E-08,SA,Total Surface Area
+CENPW,1.83E-11,SA,Total Surface Area
+SKIDA1,1.66E-08,SA,Total Surface Area
+MLLT10,7.14E-09,SA,Total Surface Area
+RPEL1,5.02E-11,SA,Total Surface Area
+INA,6.86E-12,SA,Total Surface Area
+PCGF6,1.63E-12,SA,Total Surface Area
+TAF5,7.26E-13,SA,Total Surface Area
+USMG5,8.43E-13,SA,Total Surface Area
+PDCD11,3.21E-13,SA,Total Surface Area
+CALHM2,8.39E-09,SA,Total Surface Area
+CALHM1,2.06E-08,SA,Total Surface Area
+SP1,2.15E-08,SA,Total Surface Area
+AMHR2,3.25E-08,SA,Total Surface Area
+PRR13,2.14E-08,SA,Total Surface Area
+PCBP2,1.64E-09,SA,Total Surface Area
+MAP3K12,3.36E-09,SA,Total Surface Area
+HMGA2,1.54E-19,SA,Total Surface Area
+LOC100129940,3.26E-09,SA,Total Surface Area
+AJUBA,2.15E-08,SA,Total Surface Area
+C14orf93,1.86E-09,SA,Total Surface Area
+ARHGAP27,2.21E-16,SA,Total Surface Area
+PLEKHM1,4.41E-16,SA,Total Surface Area
+CRHR1,1.18E-18,SA,Total Surface Area
+SPPL2C,4.48E-20,SA,Total Surface Area
+MAPT,1.41E-18,SA,Total Surface Area
+ARL17A,8.17E-21,SA,Total Surface Area
+NSF,2.10E-25,SA,Total Surface Area
+WNT3,1.74E-23,SA,Total Surface Area
+DPYSL5,1.36E-08,TH,Average Thickness
+MAPRE3,1.84E-08,TH,Average Thickness
+TMEM214,2.48E-08,TH,Average Thickness
+AGBL5,1.89E-08,TH,Average Thickness
+OST4,2.95E-08,TH,Average Thickness
+EMILIN1,2.27E-08,TH,Average Thickness
+KHK,4.28E-08,TH,Average Thickness
+CGREF1,2.01E-08,TH,Average Thickness
+PRDM5,2.20E-11,TH,Average Thickness
+SYBU,1.22E-08,TH,Average Thickness
+FADS2,1.70E-08,TH,Average Thickness
+KIAA0825,8.16E-09,SA,Banks of the Superior Temporal Sulcus
+ACTR10,3.02E-08,SA,Banks of the Superior Temporal Sulcus
+PSMA3,3.99E-09,SA,Banks of the Superior Temporal Sulcus
+ARID4A,1.05E-09,SA,Banks of the Superior Temporal Sulcus
+TOMM20L,1.04E-08,SA,Banks of the Superior Temporal Sulcus
+DACT1,6.38E-10,SA,Banks of the Superior Temporal Sulcus
+CBX4,1.09E-08,SA,Banks of the Superior Temporal Sulcus
+ADAMTS19,3.26E-12,SA,Caudal Middle Frontal
+CENPW,8.50E-11,SA,Caudal Middle Frontal
+TOX3,1.58E-08,SA,Caudal Middle Frontal
+DAAM1,3.36E-15,SA,Cuneus
+COL26A1,1.51E-08,SA,Entorhinal
+CALCRL,8.88E-10,SA,Frontal Pole
+TFPI,7.25E-09,SA,Frontal Pole
+MAP3K1,2.83E-10,SA,Fusiform
+SETD9,5.63E-09,SA,Fusiform
+MIER3,2.28E-08,SA,Fusiform
+DAAM1,4.46E-09,SA,Fusiform
+GPR135,8.97E-10,SA,Fusiform
+L3HYPDH,2.26E-08,SA,Fusiform
+CRHR1,2.34E-08,SA,Fusiform
+SPPL2C,4.36E-09,SA,Fusiform
+MAPT,2.62E-08,SA,Fusiform
+ARL17A,8.03E-09,SA,Fusiform
+NSF,6.61E-11,SA,Fusiform
+WNT3,4.93E-10,SA,Fusiform
+ADAMTS19,1.68E-13,SA,Inferior Parietal
+NRP1,4.59E-10,SA,Inferior Parietal
+MSRB3,2.53E-16,SA,Inferior Parietal
+DACT1,3.49E-08,SA,Inferior Temporal
+ALDH1A2,1.63E-08,SA,Inferior Temporal
+VCAN,3.49E-08,SA,Insula
+ENO4,7.03E-11,SA,Insula
+KIAA1598,1.77E-11,SA,Insula
+ANKRD13B,9.71E-11,SA,Insula
+CORO6,1.33E-10,SA,Insula
+SSH2,2.33E-12,SA,Insula
+EFCAB5,1.32E-12,SA,Insula
+NSRP1,2.13E-12,SA,Insula
+SLC6A4,1.75E-12,SA,Insula
+STRN,2.33E-10,SA,Isthmus Cingulate
+HEATR5B,1.94E-08,SA,Isthmus Cingulate
+MAST4,8.70E-11,SA,Isthmus Cingulate
+DDN,3.72E-08,SA,Isthmus Cingulate
+THBS3,3.14E-08,SA,Lateral Occipital
+MTX1,4.27E-08,SA,Lateral Occipital
+B4GALT4,2.62E-08,SA,Lateral Occipital
+ARHGAP31,1.66E-08,SA,Lateral Occipital
+PTCH1,9.16E-13,SA,Lateral Occipital
+DAAM1,7.58E-14,SA,Lateral Occipital
+CENPW,6.85E-14,SA,Lateral Orbitofrontal
+PPP1R3B,1.78E-08,SA,Lateral Orbitofrontal
+SKIDA1,1.74E-08,SA,Lateral Orbitofrontal
+FAT3,3.71E-08,SA,Lateral Orbitofrontal
+C15orf27,4.01E-08,SA,Lateral Orbitofrontal
+GFI1,1.84E-08,SA,Lingual
+WNT2B,1.89E-10,SA,Lingual
+ST7L,8.42E-10,SA,Lingual
+CAPZA1,9.09E-10,SA,Lingual
+MOV10,2.12E-09,SA,Lingual
+RHOC,1.67E-08,SA,Lingual
+NDUFAF2,5.35E-09,SA,Lingual
+GPR22,8.93E-09,SA,Lingual
+DUS4L,2.01E-09,SA,Lingual
+BCAP29,2.01E-09,SA,Lingual
+TPM2,1.47E-08,SA,Lingual
+TLN1,1.99E-09,SA,Lingual
+CREB3,1.00E-08,SA,Lingual
+GBA2,4.11E-09,SA,Lingual
+RGP1,5.56E-09,SA,Lingual
+MSMP,6.28E-09,SA,Lingual
+DCDC5,4.74E-11,SA,Lingual
+DAAM1,2.28E-13,SA,Lingual
+VSTM4,1.12E-08,SA,Medial Orbitofrontal
+FAM170B,1.43E-08,SA,Medial Orbitofrontal
+C10orf128,4.43E-08,SA,Medial Orbitofrontal
+NR2F1,1.30E-09,SA,Middle Temporal
+FAM172A,1.50E-11,SA,Middle Temporal
+KIAA0825,2.49E-12,SA,Middle Temporal
+PTCH1,1.87E-08,SA,Middle Temporal
+DPH1,1.74E-08,SA,Paracentral
+OVCA2,2.04E-08,SA,Paracentral
+HIC1,2.14E-08,SA,Paracentral
+MET,1.26E-08,SA,Parahippocampal
+FAT3,4.50E-10,SA,Parahippocampal
+ATP13A2,3.03E-08,SA,Pars Opercularis
+SDHB,7.94E-09,SA,Pars Opercularis
+HEY2,3.72E-09,SA,Pars Opercularis
+WARS2,6.61E-12,SA,Pars Orbitalis
+LOC100506944,3.03E-10,SA,Pars Orbitalis
+ZIC4,3.07E-10,SA,Pars Orbitalis
+ZIC1,3.95E-09,SA,Pars Orbitalis
+ARID1B,4.90E-10,SA,Pars Orbitalis
+FAT3,9.76E-14,SA,Pars Orbitalis
+ZIC4,4.22E-27,SA,Pars Triangularis
+ZIC1,4.17E-30,SA,Pars Triangularis
+C7orf76,4.07E-19,SA,Pars Triangularis
+SHFM1,3.14E-12,SA,Pars Triangularis
+DAAM1,6.83E-09,SA,Pars Triangularis
+WNT2B,1.61E-10,SA,Pericalcarine
+ST7L,7.78E-11,SA,Pericalcarine
+CAPZA1,1.10E-10,SA,Pericalcarine
+MOV10,1.99E-10,SA,Pericalcarine
+RHOC,1.68E-09,SA,Pericalcarine
+B4GALT4,1.28E-09,SA,Pericalcarine
+DGKQ,7.78E-09,SA,Pericalcarine
+SLC26A1,1.11E-10,SA,Pericalcarine
+IDUA,9.81E-11,SA,Pericalcarine
+FGFRL1,3.99E-09,SA,Pericalcarine
+DEPDC1B,2.35E-09,SA,Pericalcarine
+ELOVL7,1.60E-15,SA,Pericalcarine
+ERCC8,2.93E-13,SA,Pericalcarine
+NDUFAF2,1.04E-14,SA,Pericalcarine
+SMIM15,2.00E-13,SA,Pericalcarine
+ZSWIM6,3.92E-12,SA,Pericalcarine
+DKK3,2.18E-08,SA,Pericalcarine
+DCDC5,2.39E-10,SA,Pericalcarine
+DCDC1,5.90E-10,SA,Pericalcarine
+DNAJC24,2.41E-09,SA,Pericalcarine
+IMMP1L,9.28E-09,SA,Pericalcarine
+ELP4,1.48E-08,SA,Pericalcarine
+PAX6,5.67E-10,SA,Pericalcarine
+FOXG1,3.18E-08,SA,Pericalcarine
+DAAM1,1.88E-16,SA,Pericalcarine
+FSIP1,1.63E-10,SA,Pericalcarine
+ZIC4,1.78E-22,SA,Postcentral
+ZIC1,2.12E-24,SA,Postcentral
+RASL11B,1.13E-08,SA,Postcentral
+C15orf54,3.84E-08,SA,Postcentral
+STRN,2.75E-09,SA,Posterior Cingulate
+HEATR5B,6.36E-09,SA,Posterior Cingulate
+MAST4,6.64E-10,SA,Posterior Cingulate
+METTL10,7.98E-09,SA,Posterior Cingulate
+FAM175B,2.78E-09,SA,Posterior Cingulate
+ENO4,6.76E-10,SA,Precentral
+KIAA1598,2.21E-10,SA,Precentral
+C15orf54,7.47E-24,SA,Precentral
+SLC6A4,3.04E-08,SA,Precentral
+SYBU,1.33E-08,SA,Precuneus
+ENO4,5.24E-10,SA,Precuneus
+KIAA1598,8.27E-11,SA,Precuneus
+DAAM1,5.13E-22,SA,Precuneus
+HOXB2,3.55E-08,SA,Rostral Anterior Cingulate
+HOXB3,1.97E-08,SA,Rostral Anterior Cingulate
+CROCC,6.36E-09,SA,Rostral Middle Frontal
+MFAP2,1.11E-08,SA,Rostral Middle Frontal
+ATP13A2,1.04E-08,SA,Rostral Middle Frontal
+CALCRL,9.50E-09,SA,Rostral Middle Frontal
+TFPI,1.57E-11,SA,Rostral Middle Frontal
+KIAA0825,1.29E-08,SA,Rostral Middle Frontal
+EHBP1L1,2.94E-08,SA,Rostral Middle Frontal
+KCNK7,2.12E-08,SA,Rostral Middle Frontal
+MAP3K11,1.62E-08,SA,Rostral Middle Frontal
+PCCA,2.50E-09,SA,Rostral Middle Frontal
+CDH11,1.40E-10,SA,Rostral Middle Frontal
+HEY2,2.25E-10,SA,Superior Frontal
+KLC3,1.52E-08,SA,Superior Frontal
+ERCC2,2.68E-08,SA,Superior Frontal
+FOXP1,4.10E-11,SA,Superior Parietal
+RASL11B,1.57E-10,SA,Superior Parietal
+NEUROG2,6.68E-10,SA,Superior Parietal
+ZGRF1,2.21E-08,SA,Superior Parietal
+NR2F1,2.90E-10,SA,Superior Parietal
+FAM172A,2.50E-11,SA,Superior Parietal
+KIAA0825,1.94E-08,SA,Superior Parietal
+GADD45GIP1,8.58E-09,SA,Superior Parietal
+DAND5,4.14E-09,SA,Superior Parietal
+CHMP4B,9.17E-10,SA,Superior Parietal
+LYPD6B,6.60E-17,SA,Superior Temporal
+SGK223,3.27E-12,SA,Superior Temporal
+CLDN23,2.77E-14,SA,Superior Temporal
+MFHAS1,8.01E-17,SA,Superior Temporal
+PPP1R3B,1.59E-10,SA,Superior Temporal
+TNKS,6.30E-12,SA,Superior Temporal
+MSRA,1.77E-18,SA,Superior Temporal
+PRSS55,2.85E-08,SA,Superior Temporal
+RP1L1,9.94E-15,SA,Superior Temporal
+C8orf74,6.04E-11,SA,Superior Temporal
+SOX7,1.86E-08,SA,Superior Temporal
+XKR6,7.38E-20,SA,Superior Temporal
+MTMR9,8.29E-13,SA,Superior Temporal
+SLC35G5,3.91E-09,SA,Superior Temporal
+FAM167A,9.79E-16,SA,Superior Temporal
+BLK,1.40E-14,SA,Superior Temporal
+GATA4,9.86E-11,SA,Superior Temporal
+NEIL2,2.51E-08,SA,Superior Temporal
+FDFT1,3.68E-08,SA,Superior Temporal
+DEFB136,5.38E-12,SA,Superior Temporal
+DEFB135,4.29E-13,SA,Superior Temporal
+DEFB134,2.22E-11,SA,Superior Temporal
+ZIC4,3.12E-12,SA,Supramarginal
+ZIC1,2.68E-13,SA,Supramarginal
+FGFR3,1.20E-08,SA,Supramarginal
+LETM1,2.70E-09,SA,Supramarginal
+RASL11B,6.55E-10,SA,Supramarginal
+DAAM1,1.58E-12,SA,Supramarginal
+LYPD6B,3.84E-18,SA,Transverse Temporal
+ERAP2,2.62E-08,SA,Transverse Temporal
+P4HA2,9.21E-10,SA,Transverse Temporal
+PDLIM4,2.51E-08,SA,Transverse Temporal
+MSRA,1.48E-08,SA,Transverse Temporal
+XKR6,8.61E-12,SA,Transverse Temporal
+DACT1,1.18E-08,TH,Banks of the Superior Temporal Sulcus
+DAAM1,5.23E-10,TH,Cuneus
+LPAR1,1.51E-09,TH,Insula
+DACT1,6.28E-09,TH,Middle Temporal
+DAAM1,2.56E-08,TH,Pericalcarine
+C15orf54,1.12E-10,TH,Postcentral
+ST7L,1.26E-08,SA,TATES 
+CAPZA1,9.41E-09,SA,TATES 
+MOV10,1.32E-08,SA,TATES 
+WARS2,8.07E-10,SA,TATES 
+STRN,1.31E-09,SA,TATES 
+HEATR5B,3.26E-08,SA,TATES 
+LYPD6B,9.89E-23,SA,TATES 
+CALCRL,3.83E-08,SA,TATES 
+TFPI,3.26E-08,SA,TATES 
+FOXP1,2.15E-08,SA,TATES 
+ZIC4,1.66E-75,SA,TATES 
+ZIC1,1.26E-87,SA,TATES 
+RASL11B,4.46E-10,SA,TATES 
+ELOVL7,2.94E-21,SA,TATES 
+ERCC8,2.42E-20,SA,TATES 
+NDUFAF2,6.41E-22,SA,TATES 
+SMIM15,3.48E-16,SA,TATES 
+NR2F1,9.65E-10,SA,TATES 
+FAM172A,9.39E-13,SA,TATES 
+POU5F2,5.66E-10,SA,TATES 
+KIAA0825,1.15E-12,SA,TATES 
+ADAMTS19,2.35E-11,SA,TATES 
+HEY2,2.87E-09,SA,TATES 
+CENPW,7.77E-28,SA,TATES 
+C7orf76,9.14E-32,SA,TATES 
+SHFM1,5.50E-10,SA,TATES 
+CLDN23,7.22E-12,SA,TATES 
+MFHAS1,1.02E-12,SA,TATES 
+PPP1R3B,3.78E-09,SA,TATES 
+TNKS,3.02E-08,SA,TATES 
+MSRA,8.90E-12,SA,TATES 
+XKR6,2.92E-16,SA,TATES 
+MTMR9,1.25E-10,SA,TATES 
+FAM167A,1.72E-10,SA,TATES 
+BLK,3.37E-10,SA,TATES 
+DEFB136,2.42E-09,SA,TATES 
+DEFB135,3.58E-10,SA,TATES 
+DEFB134,1.53E-08,SA,TATES 
+PTCH1,3.97E-18,SA,TATES 
+DENND1A,6.45E-10,SA,TATES 
+ENO4,6.79E-09,SA,TATES 
+KIAA1598,4.82E-10,SA,TATES 
+DCDC5,2.22E-09,SA,TATES 
+FAT3,4.61E-11,SA,TATES 
+MSRB3,1.53E-31,SA,TATES 
+DACT1,2.21E-08,SA,TATES 
+DAAM1,2.68E-58,SA,TATES 
+GPR135,1.49E-10,SA,TATES 
+L3HYPDH,1.08E-08,SA,TATES 
+JKAMP,2.53E-08,SA,TATES 
+C15orf54,3.02E-37,SA,TATES 
+FSIP1,3.09E-09,SA,TATES 
+ANKRD13B,8.96E-09,SA,TATES 
+CORO6,2.63E-08,SA,TATES 
+SSH2,1.91E-11,SA,TATES 
+EFCAB5,1.47E-11,SA,TATES 
+NSRP1,3.35E-11,SA,TATES 
+SLC6A4,6.92E-11,SA,TATES 
+NSF,1.20E-09,SA,TATES 
+WNT3,7.30E-09,SA,TATES 
+RAD23A,4.58E-13,SA,TATES 
+GADD45GIP1,1.44E-13,SA,TATES 
+DAND5,1.23E-13,SA,TATES 
+NFIX,5.04E-11,SA,TATES 
+C15orf54,3.23E-10,TH,TATES 
