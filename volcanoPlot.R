@@ -23,8 +23,8 @@ counts = read.delim('/home/jovyan/KR_NAS/Sanger_288ROIs_TargetCountMatrix.txt', 
 genes = rownames(counts)
 counts = counts[,match(metadata$Sanger_sampleID[metadata$Sanger_sampleID %in% colnames(counts)], colnames(counts),)]
 
-subset_EOMESpos = metadata$age == '19pcw' & metadata$AOI_type == 'EOMESpos' & !is.na(metadata$Radial_position) & metadata$slide == '00MU'
-subset_HOPXpos = metadata$age == '19pcw' & metadata$AOI_type == 'HOPXpos' & !is.na(metadata$Radial_position) & metadata$slide == '00MU'
+subset_EOMESpos = metadata$age == '19pcw' & metadata$AOI_type == 'EOMESpos' & !is.na(metadata$Radial_position)
+subset_HOPXpos = metadata$age == '19pcw' & metadata$AOI_type == 'HOPXpos' & !is.na(metadata$Radial_position)
 
 counts_subset = as.matrix(cbind(counts[, subset_EOMESpos], counts[, subset_HOPXpos]))
 
@@ -64,6 +64,6 @@ EnhancedVolcano(res,
 dev.off()
 
 write.csv(res,'/home/jovyan/KR_NAS/DEseq_results.csv')
-
+write.csv(genes,'/home/jovyan/KR_NAS/DEseq_genes.csv')
 
 
