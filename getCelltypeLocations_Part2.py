@@ -28,7 +28,7 @@ from matplotlib import rc
 
 os.chdir('/home/jovyan/KR_NAS/')
 
-rSlides = np.array(('00MW')) # slide we want to look at
+rSlides = np.array(('00MV', '00MV-2')) # slide we want to look at
 AOI_type = ['Geometric'] #np.array(('HOPXpos', 'EOMESpos', 'Residual', 'Ring', 'Geometric'))
 Radial_positions = np.array((2))
 
@@ -112,24 +112,44 @@ results = mod1.spot_factors_df
 results_normed = np.array(results)
 results_normed = (results_normed.T/[sum(results_normed[i,]) for i in range(len(results_normed[:,1]))]).T
 
-for order in range(8):
-    print(order)
-    # Plot the results as a stacked bar plot:
-    cellColours = np.array(('green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red'))
-    celltypes = results.columns
-    # results_normed = np.array(results)
-    # results_normed = (results_normed - results_normed.min(0)) / results_normed.ptp(0)
-    figsize(20,20)
-    for i in range(len(celltypes)):
-        plt.subplot(4,4, i + 1)
-        x = sample_info['x'][subset_rois]
-        y = results_normed[:,celltypes == celltypes[i]][:,0]
-        plt.plot(np.unique(x), np.poly1d(np.polyfit(x, y, order))(np.unique(x)), label = celltypes[i], c = cellColours[i])
-        plt.scatter(x, y, label = celltypes[i], c = cellColours[i])
-        plt.xlabel('CorticalDepth')
-        plt.ylabel('mRNA Proportion')
-        plt.legend()
-    plt.savefig('CellLocations14pcw_PolynomialOrder' + str(order) + '.pdf')
-    plt.show()
+
+# Set figure parameters:
+SMALL_SIZE = 20
+MEDIUM_SIZE = 20
+BIGGER_SIZE = 20
+
+plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
+plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
+plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
+plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
+plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
+
+cmap = matplotlib.cm.get_cmap('tab20')
+order = 6
+print(order)
+# Plot the results as a stacked bar plot:
+cellColours = np.array(('green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red', 'green', 'blue', 'purple', 'yellow', 'red'))
+celltypes = results.columns
+# results_normed = np.array(results)
+# results_normed = (results_normed - results_normed.min(0)) / results_normed.ptp(0)
+figsize(5,10)
+count = 0
+colourIndex = (5,9)
+for i in (1,11):
+    plt.subplot(2,1, count + 1)
+    x = sample_info['x'][subset_rois]
+    y = results_normed[:,celltypes == celltypes[i]][:,0]
+    plt.plot(np.unique(x), np.poly1d(np.polyfit(x, y, order))(np.unique(x)), label = None, c = cmap(colourIndex[count]))
+    plt.scatter(x, y, label = celltypes[i], c = cmap(colourIndex[count]), s = 100)
+    plt.xlabel('Cortical Depth')
+    plt.ylabel('UMI Proportion')
+    plt.ylim(0,0.16)
+    plt.legend()
+    count = count + 1
+plt.tight_layout()
+plt.savefig('CellLocations19pcw_PolynomialOrder' + str(order) + '.pdf')
+plt.show()
 
 

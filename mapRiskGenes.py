@@ -43,7 +43,7 @@ ID = np.array(ID['gene symbol'])
 IQ = pd.read_csv('riskGenes/IQGenes_Savage2018.csv', skiprows=4)
 IQ = np.array(IQ.iloc[:507,:]['Gene Name'])
 
-rSlides = np.array(('00MW')) #np.array(('00MU', '00MV', '00MV-2')) # slide we want to look at
+rSlides = np.array(('00MU', '00MV', '00MV-2')) # slide we want to look at #np.array(('00MW')) #
 AOI_type = np.array(('EOMESpos', 'HOPXpos', 'Residual', 'Ring'))
 Radial_positions = np.array((1,2,3))
 
@@ -95,15 +95,19 @@ autism_detected = np.array([sum(counts_subset.iloc[autism_index,i] > newLOD_2_su
 brainsize_detected = np.array([sum(counts_subset.iloc[brainsize_index,i] > newLOD_2_subset[i]) for i in range(len(newLOD_2_subset))])
 ID_detected = np.array([sum(counts_subset.iloc[ID_index,i] > newLOD_2_subset[i]) for i in range(len(newLOD_2_subset))])
 IQ_detected = np.array([sum(counts_subset.iloc[IQ_index,i] > newLOD_2_subset[i]) for i in range(len(newLOD_2_subset))])
+All_detected = np.array([sum(counts_subset.iloc[:,i] > newLOD_2_subset[i]) for i in range(len(newLOD_2_subset))])
 
 plt.scatter(corticalDepth, autism_detected/len(autism), label = 'Autism')
 plt.scatter(corticalDepth, brainsize_detected/len(brainsize), label = 'Brainsize')
-plt.scatter(corticalDepth, ID_detected/len(ID), label = 'ID')
+plt.scatter(corticalDepth, ID_detected/len(ID), label = 'All NDDs')
 plt.scatter(corticalDepth, IQ_detected/len(IQ), label = 'IQ')
+plt.scatter(corticalDepth, All_detected/18190, label = 'All Genes', c = 'grey')
 plt.xlabel('Cortical Depth')
 plt.ylabel('Proportion of Gene Set Detected')
 plt.legend()
-plt.savefig('GeneSetDetection.pdf')
+plt.ylim(-0.1,1)
+plt.savefig('GeneSetDetectionNew.pdf')
+plt.show()
 
 # Normalized:
 
@@ -119,6 +123,7 @@ plt.scatter(corticalDepth, IQ_detected, label = 'IQ')
 plt.xlabel('Cortical Depth')
 plt.ylabel('Proportion of Detected Genes')
 plt.legend()
+plt.show()
 
 # Plot the summed scaled expression of gene sets as a function of cortical depth:
 
@@ -159,13 +164,13 @@ IQ_detected = np.array([sum(counts_z_score[IQ_index,i])/len(IQ) for i in range(l
 
 All_detected = np.array([sum(counts_z_score[:,i])/18119 for i in range(len(newLOD_2_subset))])
 
+plt.scatter(corticalDepth, brainsize_detected, label = 'Brainsize')
+plt.scatter(corticalDepth, IQ_detected, label = 'IQ')
+plt.scatter(corticalDepth, ID_detected, label = 'All NDDs')
 plt.scatter(corticalDepth, All_detected, label = 'All Genes', c = 'grey')
 plt.scatter(corticalDepth, autism_detected, label = 'Autism')
-plt.scatter(corticalDepth, brainsize_detected, label = 'Brainsize')
-plt.scatter(corticalDepth, ID_detected, label = 'ID')
-plt.scatter(corticalDepth, IQ_detected, label = 'IQ')
 plt.xlabel('Cortical Depth')
 plt.ylabel('Mean Z-score of Log2(Nomalized Counts)')
 plt.ylim(-1,1)
 plt.legend()
-plt.savefig('GeneSetTrajectories.pdf')
+plt.savefig('GeneSetTrajectoriesNew.pdf')
