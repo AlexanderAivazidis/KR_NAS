@@ -1,0 +1,114 @@
+,gene_a,gene_b,receptor_a,receptor_b,oRG_position,interaction_detected
+0,TNC,"['ITGB1', 'ITGA4']",False,False,[0],True
+1,TNF,DAG1,False,True,[1],True
+2,EPHB2,EFNB3,True,True,[0],True
+3,FGFR2,EPHA4,True,True,[0],True
+4,PDGFRA,PDGFC,True,False,[1],True
+5,PDGFRB,PDGFD,True,False,[1],True
+7,WNT4,FZD8,False,True,[1],True
+8,FLT4,PDGFC,True,False,[1],True
+9,NOTCH2,DLL4,True,False,[0],True
+10,FGF18,FGFR2,False,True,[1],True
+11,"['PDGFRA', 'PDGFRB']",PDGFD,True,False,[1],True
+12,COL4A5,"['ITGB1', 'ITGA11']",False,False,[0],True
+14,EPHB2,EFNA5,True,False,[0],True
+15,FGFR2,CD83,True,True,[0],True
+16,FGFR2,PTPRR,True,True,[0],True
+17,VEGFA,EPHB2,False,True,[0 1],True
+18,NRP2,VEGFA,True,False,[1],True
+19,JAM3,"['ITGB2', 'ITGAM']",False,False,[0],True
+20,"['FLT1', 'KDR']",VEGFA,True,False,[1],True
+21,EPHB2,EFNB1,True,False,[0 1],True
+22,EPHA4,EFNB1,True,False,[1],True
+23,VEGFA,KDR,False,True,[0],True
+24,COL5A2,"['ITGB1', 'ITGA2']",False,False,[1],True
+25,COL20A1,"['ITGB1', 'ITGA2']",False,False,[1],True
+27,COL3A1,"['ITGB1', 'ITGA2']",False,False,[1],True
+28,COL1A2,"['ITGB1', 'ITGA2']",False,False,[1],True
+29,COL5A3,"['ITGB1', 'ITGA2']",False,False,[1],True
+30,COL9A3,"['ITGB1', 'ITGA2']",False,False,[1],True
+31,COL9A2,"['ITGB1', 'ITGA2']",False,False,[1],True
+33,COL24A1,"['ITGB1', 'ITGA2']",False,False,[1],True
+34,COL13A1,"['ITGB1', 'ITGA2']",False,False,[1],True
+35,COL21A1,"['ITGB1', 'ITGA2']",False,False,[1],True
+36,COL4A5,"['ITGB1', 'ITGA1']",False,False,[0],True
+37,PDGFB,ADGRV1,False,True,[1],True
+38,ADGRL1,NRG1,True,True,[1],True
+39,"['ACVR1', 'ACVR2B']",INHBB,True,False,[1],True
+40,"['ACVR1', 'ACVR2A']",INHBB,True,False,[1],True
+41,EGFR,HBEGF,True,True,[1],True
+42,ERBB3,NRG1,True,True,[1],True
+43,NRG1,LSR,True,True,[0],True
+44,"['ACVR1', 'BMPR2']",BMP7,True,False,[1],True
+45,"['ACVR1', 'ACVR2A']",BMP7,True,False,[1],True
+46,"['ACVR1', 'ACVR2B']",BMP7,True,False,[1],True
+47,"['BMPR1A', 'BMPR2']",BMP7,True,False,[1],True
+48,EGFR,NRG1,True,True,[1],True
+49,"['BMPR1A', 'ACVR2A']",BMP7,True,False,[1],True
+50,PDGFB,LRP1,False,True,[1],True
+51,FGF18,FGFR1,False,True,[1],True
+52,"['BMPR1A', 'ACVR2B']",BMP7,True,False,[1],True
+53,EFNB2,EPHA4,True,True,[0],True
+54,NOTCH2,DLL3,True,False,[0],True
+55,VEGFA,FLT1,False,True,[0],True
+56,JAG1,NOTCH2,False,True,[1],True
+57,NRP1,VEGFA,True,False,[1],True
+58,TIMP1,FGFR2,False,True,[0 1],True
+59,COL11A1,"['ITGB1', 'ITGA11']",False,False,[0],True
+60,JAM2,"['ITGB1', 'ITGA4']",False,False,[0],True
+61,FGFR2,FGF9,True,False,[0],True
+62,EPHB6,EFNB1,True,False,[1],True
+63,"['LIFR', 'IL6ST']",OSM,True,False,[0],True
+64,EPHB2,EFNB2,True,True,[0 1],True
+65,FN1,"['ITGB1', 'ITGAV']",False,False,[1],True
+66,"['ACVR1B', 'ACVR2B']",INHBB,True,False,[1],True
+67,COL4A5,"['ITGB1', 'ITGA2']",False,False,[0 1],True
+68,"['ACVR1B', 'ACVR2A']",INHBB,True,False,[1],True
+69,COL12A1,"['ITGB1', 'ITGA2']",False,False,[1],True
+70,LAMC1,"['ITGB1', 'ITGA6']",False,False,[1],True
+71,ERBB4,HBEGF,True,True,[1],True
+72,LAMC1,"['ITGB1', 'ITGA2']",False,False,[1],True
+73,FN1,"['ITGB1', 'ITGA2']",False,False,[1],True
+74,COL4A2,"['ITGB1', 'ITGA2']",False,False,[1],True
+76,SIRPA,CD47,True,True,[1],True
+77,JAM3,JAM3,False,False,[0 1],True
+78,EPHB1,EFNB1,True,False,[1],True
+79,EFNA1,EPHA7,False,True,[1],True
+80,VEGFA,GRIN2B,False,True,[0],True
+81,EFNA1,EPHA5,False,True,[1],True
+82,FGFR1,FGFR2,True,True,[0 1],True
+83,NRG1,ERBB4,True,True,[0],True
+84,"['NRP1', 'PLXNA4']",SEMA3A,True,False,[1],True
+85,WNT5A,FZD3,False,True,[1],True
+86,"['NRP1', 'PLXNA2']",SEMA3A,True,False,[1],True
+87,COL11A1,"['ITGB1', 'ITGA1']",False,False,[0],True
+88,NRP1,SEMA3A,True,False,[1],True
+89,FGFR2,XPR1,True,True,[0],True
+90,EGFR,MIF,True,False,[1],True
+91,CD74,MIF,True,False,[1],True
+92,MIF,TNFRSF10D,False,True,[0],True
+93,EGFR,COPA,True,False,[1],True
+94,CD74,COPA,True,False,[1],True
+95,CD74,APP,True,False,[1],True
+96,FGFR1,FGF9,True,False,[0],True
+97,GRN,SORT1,False,True,[1],True
+98,COL9A1,"['ITGB1', 'ITGA2']",False,False,[1],True
+99,JAM2,JAM3,False,False,[0 1],True
+100,BMP7,PTPRK,False,True,[0],True
+101,MDK,SORL1,False,True,[0],True
+102,COL11A1,"['ITGB1', 'ITGA2']",False,False,[0 1],True
+103,EFNB2,EPHB1,True,True,[0],True
+104,HLA-C,FAM3C,True,False,[1],True
+105,LRP6,CKLF,True,False,[0 1],True
+106,FGFR1,NCAM1,True,True,[0],True
+107,MDK,LRP1,False,True,[0 1],True
+108,GLRA2,FAM3C,True,False,[1],True
+109,EPHB6,EFNB2,True,True,[1],True
+110,NRG1,NETO2,True,True,[0],True
+111,LAMP1,FAM3C,True,False,[0 1],True
+112,CD46,JAG1,True,False,[0],True
+113,COPA,SORT1,False,True,[0 1],True
+114,CADM3,CADM4,False,False,[1],True
+115,CADM1,CADM1,False,False,[0 1],True
+116,MDK,PTPRZ1,False,False,[0 1],True
+117,PTN,PTPRZ1,False,False,[0 1],True

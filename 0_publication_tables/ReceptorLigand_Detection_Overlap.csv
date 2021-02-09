@@ -1,0 +1,6 @@
+,EOMESpos AOIs/IP cluster,HOPXpos AOIs/oRG cluster
+both,119,181
+only RNAseq,19,45
+only WTA,69,45
+only WTA (filter by reference ring),18,20
+only WTA (filtered by reference rings and RNAseq data),10,6

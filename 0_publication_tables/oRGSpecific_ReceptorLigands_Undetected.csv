@@ -1,0 +1,6 @@
+,gene_a,gene_b,receptor_a,receptor_b,oRG_position,interaction_detected
+6,WNT5A,FZD2,False,True,[1],False
+13,COL4A6,"['ITGB1', 'ITGA11']",False,False,[0],False
+26,COL4A6,"['ITGB1', 'ITGA1']",False,False,[0],False
+32,COL19A1,"['ITGB1', 'ITGA2']",False,False,[1],False
+75,COL4A6,"['ITGB1', 'ITGA2']",False,False,[0 1],False

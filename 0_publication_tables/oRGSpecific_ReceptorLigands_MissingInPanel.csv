@@ -1,0 +1,7 @@
+,gene_a,gene_b,receptor_a,receptor_b,oRG_position,missing_gene
+0,COL6A1,"['ITGB1', 'ITGA2']",False,False,1,COL6A1
+1,COL18A1,"['ITGB1', 'ITGA2']",False,False,1,COL18A1
+2,CXCL12,CXCR4,False,True,1,CXCR4
+3,COL4A1,"['ITGB1', 'ITGA2']",False,False,1,COL4A1
+4,PGRMC2,CCL4L2,True,False,0,CCL4L2
+5,CXADR,FAM3C,True,False,1,CXADR
